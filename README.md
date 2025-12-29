@@ -15,11 +15,12 @@ O projeto é dividido em duas partes principais:
 
   - Node.js (ES Modules)
   - Express
-  - Prisma ORM (Postgres/SQLite - ver `prisma/schema.prisma`)
+  - Prisma ORM (Postgres/ Via Docker)
   - JWT para autenticação
   - bcrypt / bcryptjs para hash de senhas
   - dotenv, cors, express-validator
   - Nodemon (dev)
+  - Docker
 
 - Frontend
   - React + TypeScript
@@ -40,6 +41,10 @@ O projeto é dividido em duas partes principais:
 - Node.js (v18+ recomendada)
 - npm ou yarn
 - Banco definido pelo `prisma/schema.prisma` (se for usar Postgres, configure as variáveis de ambiente)
+
+<br/>
+<img border="0" data-original-height="1080" data-original-width="1920" height="600" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgERIsmIvPD8XS02VttA4ppXQSyRKbduD02gKGNQ7H3fbozhwMjUGiTPdf0Q7ezc3knMu0_Fdeli_7qSUzWeFIGu4cmwUSW7Y1QNWnx8CxVyAcxvuCUwVx-HbOeB_dNFkCJH24KJhh9dN6Q952HqiRn0AdV_7nF9PhCEjxzhrHEqlpGFa2xNseZph9JALB6/s2130/news-ball.jpg" width="1280" />
+<br/>
 
 ## Como clonar
 
@@ -105,10 +110,6 @@ npm run dev
   - DATABASE_URL (ex: file:./dev.db ou connection string do Postgres)
   - JWT_SECRET
 
-## Dicas rápidas
-
-- Se for usar banco local simples para desenvolvimento, configure `DATABASE_URL="file:./dev.db"` e rode `npx prisma migrate dev`.
-- Mantenha o backend rodando em uma porta (ex: 3333) e ajuste a baseURL do axios no frontend (`frontend/src/services/api.ts`).
 
 ## Contribuição
 
@@ -120,8 +121,3 @@ Adicione um arquivo `LICENSE` com a licença desejada (MIT, GPL, etc.) se quiser
 
 ---
 
-Se quiser, eu posso:
-
-- adicionar um exemplo de `.env.example` para o backend;
-- ajustar o `README.md` do `frontend/` para detalhes da UI;
-- adicionar scripts Docker/compose para facilitar execução.
