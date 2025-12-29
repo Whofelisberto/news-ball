@@ -70,12 +70,10 @@ export async function UpdateNoticia(req, res) {
       where: { id },
       data: { title, description, imageUrl },
     });
-    return res
-      .status(200)
-      .json({
-        message: "Notícia atualizada com sucesso",
-        noticia: noticiaAtualizada,
-      });
+    return res.status(200).json({
+      message: "Notícia atualizada com sucesso",
+      noticia: noticiaAtualizada,
+    });
   } catch (error) {
     console.error("Erro ao atualizar notícia:", error);
     return res.status(500).json({ message: "Erro ao atualizar notícia" });
@@ -95,5 +93,27 @@ export async function DeletarNoticia(req, res) {
   } catch (error) {
     console.error("Erro ao deletar notícia:", error);
     return res.status(500).json({ message: "Erro ao deletar notícia" });
+  }
+}
+
+export async function ObterNoticiaPorId(req, res) {
+  try {
+    const { id } = req.params;
+    const noticia = await prisma.news.findUnique({
+      where: { id },
+      include: {
+        author: {
+          select: { id: true, name: true },
+        },
+      },
+    });
+
+    if (!noticia) {
+      return res.status(404).json({ message: "Notícia não encontrada" });
+    }
+    return res.status(200).json(noticia);
+  } catch (error) {
+    console.error("Erro ao obter notícia:", error);
+    return res.status(500).json({ message: "Erro ao obter notícia" });
   }
 }
