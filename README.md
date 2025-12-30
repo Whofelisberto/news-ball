@@ -13,7 +13,7 @@ O projeto é dividido em duas partes principais:
 
 - Backend
 
-  - Node.js (ES Modules)
+  - Node.js
   - Express
   - Prisma ORM (Postgres/ Via Docker)
   - JWT para autenticação
@@ -44,6 +44,10 @@ O projeto é dividido em duas partes principais:
 
 <br/>
 <img border="0" data-original-height="1080" data-original-width="1920" height="600" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgERIsmIvPD8XS02VttA4ppXQSyRKbduD02gKGNQ7H3fbozhwMjUGiTPdf0Q7ezc3knMu0_Fdeli_7qSUzWeFIGu4cmwUSW7Y1QNWnx8CxVyAcxvuCUwVx-HbOeB_dNFkCJH24KJhh9dN6Q952HqiRn0AdV_7nF9PhCEjxzhrHEqlpGFa2xNseZph9JALB6/s2130/news-ball.jpg" width="1280" />
+<br/>
+
+<br/>
+<img border="0" data-original-height="1080" data-original-width="1920" height="600" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj75mT5cXnq0jNZsYzFhv4NMxl6UVLdofNR9mHwRkH_lPoZHNj-WW4Zgv4rZpgo642iej9AvveXHHe9SdPbUSEjmi3FYC9tR-rvdi7-4B8m3QzRJg-8GPgX0363CGUxjpydi0RGglI-nIUpzCBb5YQdzIWcAzCp8OAdNeNOrq4x6NrM5Dm6RO5ZWLwM7YLJ/s1820/news-ball-3.jpg" width="1280" />
 <br/>
 
 ## Como clonar
